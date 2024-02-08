@@ -20,6 +20,8 @@ const Checkwin = () => {
     [0, 4, 8],
     [2, 4, 6],
   ];
+  let count =0
+  let flag =true
   wins.forEach((e) => {
     if (
       boxtext[e[0]].innerText === boxtext[e[1]].innerText &&
@@ -29,14 +31,28 @@ const Checkwin = () => {
       
       info.innerText = boxtext[e[0]].innerText + " WON";
       gameOver = true;
+      flag=false
     }
+    if(boxtext[e[0]].innerText !== "" && boxtext[e[1]].innerText !== "" && boxtext[e[2]].innerText !== ""){
+      count++
+    }
+      
+      if(count==8 && flag==true){
+        info.innerText = "Game Over, Start Again" ;
+        gameOver= true
+      }
+      
+    
+   
   });
 
 };
 
+
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach((item) => {
   //getting each box
+
   let boxtext = item.querySelector(".boxtext");
   //console.log(item.querySelector(".boxtext"));
   item.addEventListener("click", () => {
