@@ -1,24 +1,30 @@
 nav{
     background-color: rgb(64, 16, 109);
     height: 50px;
+    padding-bottom: 10px;
 }
 ul{
    list-style: none;
    font-size: 50px;
    color: aliceblue;
    text-align: center;
+   
 }
+
 #container{
     display: flex;
     justify-content: center;
     margin-top: 50px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+   
 }
 .grid{
     display:grid;
     grid-template-columns: repeat(3,15vh);
     grid-template-rows: repeat(3,15vh);
     text-align: center;
+    background-color: beige;
+    margin-bottom: 5px;
 } 
 
 .box{
@@ -31,7 +37,7 @@ ul{
 
 }
 .box:hover{
-    background-color: rgb(227, 217, 236);
+    background-color: rgb(236, 232, 240);
 }
 .gameinfo{
     margin: 20vh;
@@ -43,4 +49,7 @@ ul{
     border-radius: 5px;
     margin: 20px 50%;
    
+}
+body{
+    background-color: rgb(227, 217, 236);
 }
